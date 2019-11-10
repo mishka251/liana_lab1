@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mass Converter</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+<div id="vue-app">
+    <label for="input-value">Введите значение</label>
+    <input id="input-value" type="number" v-model="input_value">
+
+    <h4>Тип введенного</h4>
+    <template v-for="type in types">
+        <label>
+            <input type="radio" name="inputType" v-bind:value="type" v-model="selectedInputType">
+            {{type}}
+        </label>
+        <br>
+    </template>
+
+    <h4>Желаемый тип</h4>
+    <template v-for="type in types">
+        <label>
+            <input type="radio" name="outputType" v-bind:value="type" v-model="selectedOutputType">
+            {{type}}
+        </label>
+        <br>
+    </template>
+
+    <h3> Результат: {{result_value()}}</h3>
+</div>
+</body>
+</html>
