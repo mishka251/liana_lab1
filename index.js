@@ -40,36 +40,36 @@ function convert(inputValue, inputType, outputType) {
 }
 
 
-function toKG( type,  val){
-    switch(type){
+function toKG(type, val) {
+    switch (type) {
         case 'Тонна':
-            return val*1000;
+            return val * 1000;
         case 'Килограмм':
             return val;
         case 'Грамм':
-            return val/1000;
+            return val / 1000;
         case 'Милиграмм':
-            return val/(1000*1000);
+            return val / (1000 * 1000);
         case 'Фунт':
-            return 0.453592*val;
+            return 0.453592 * val;
         default:
             throw Error("евалидный тип");
     }
 }
 
 
-function fromKG( type,  val){
-    switch(type){
+function fromKG(type, val) {
+    switch (type) {
         case 'Тонна':
-            return val/1000;
+            return val / 1000;
         case 'Килограмм':
             return val;
         case 'Грамм':
-            return val*1000;
+            return val * 1000;
         case 'Милиграмм':
-            return val*(1000*1000);
+            return val * (1000 * 1000);
         case 'Фунт':
-            return val/0.453592;
+            return val / 0.453592;
         default:
             throw Error("евалидный тип");
     }
